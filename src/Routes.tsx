@@ -1,28 +1,32 @@
 import * as React from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
-import Dashboard from './pages/Dashboard/Dashboard';
-import Login from './pages/Login/Login';
+import AppFrame from './components/AppFrame/AppFrame';
 
-import Header from './components/Header/Header';
-import LeftMenu from './components/LeftMenu/LeftMenu';
+import Home from './pages/Home/Home';
 
 const history = createBrowserHistory();
+
+/**
+ * Application routes.
+ */
+const routes = {
+  Home: '/',
+};
 
 class Routes extends React.Component {
   public render() {
     return (
-      <Router history={ history } >
-        <div>
-          <Header />
-          <LeftMenu />
-          <Switch>
-            <Route exact path="/login" component={ Login } />
-            <Route exact path="/" component={ Dashboard } />
-          </Switch>
-        </div>
-      </Router>
+      <HashRouter>
+        <Route exact path="/">
+          <AppFrame>
+            <Switch>
+              <Route exact path={routes.Home} component={Home} />
+            </Switch>
+          </AppFrame>
+        </Route>
+      </HashRouter>
     );
   }
 }
