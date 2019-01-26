@@ -3,6 +3,8 @@
 @import './base/reset';
 @import './base/global';
 
-@import '../pages/Home/Home';
+@import '../pages/Home/home';
+@import '../pages/Contacts/contacts';
 
-@import '../components/Header/Header';
+@import '../components/AppFrame/appFrame';
+@import '../components/AppMenu/appMenu';

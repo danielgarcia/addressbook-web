@@ -1,0 +1,13 @@
+.app-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: $app-menu-width;
+  height: 100%;
+  background: $off-black;
+  color: $off-white;
+  a {
+    color: $off-white;
+  }
+}

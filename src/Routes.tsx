@@ -5,6 +5,7 @@ import { createBrowserHistory } from 'history';
 import AppFrame from './components/AppFrame/AppFrame';
 
 import Home from './pages/Home/Home';
+import Contacts from './pages/Contacts/Contacts';
 
 const history = createBrowserHistory();
 
@@ -13,6 +14,7 @@ const history = createBrowserHistory();
  */
 const routes = {
   Home: '/',
+  Contacts: '/contacts',
 };
 
 class Routes extends React.Component {
@@ -23,6 +25,7 @@ class Routes extends React.Component {
           <AppFrame>
             <Switch>
               <Route exact path={routes.Home} component={Home} />
+              <Route exact path={routes.Contacts} component={Contacts} />
             </Switch>
           </AppFrame>
         </Route>

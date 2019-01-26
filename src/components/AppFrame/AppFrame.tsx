@@ -1,12 +1,12 @@
 import * as React from 'react';
-import Header from '../Header/Header';
+import AppMenu from '../AppMenu/AppMenu';
 
 class AppFrame extends React.Component {
   public render() {
     return (
-      <div>
-        <Header />
-        <div className="content">
+      <div className="app-frame">
+        <AppMenu />
+        <div className="app-content">
           {this.props.children}
         </div>
       </div>
